@@ -309,6 +309,10 @@ body
 // drop === end
 
 .section-main
+	+below(1400px)
+		background-position-x 70%
+	+below(640px)
+		background-position-x 0
 	height 100vh
 	//background: rgb(116,113,254);
 	//background: linear-gradient(145deg, rgba(116,113,254,1) 0%, rgba(79,74,255,1) 100%)
@@ -424,7 +428,7 @@ body
 	+below(1480px)
 		font-size: 34px
 	+below(1024px)
-		font-size: 2.5vw
+		font-size: 3vw
 	+below(640px)
 		width: 100%
 		font-size: 18px
@@ -635,6 +639,8 @@ body
 	margin-bottom: 40px
 
 .payment
+	max-width 768px
+	margin: 0 auto
 	f()
 	fw()
 	justify-content space-between
@@ -646,7 +652,7 @@ body
 	+below(640px)
 		width: 100%
 		padding: 30px
-	width: 30%
+	width: 46%
 	background: white
 	padding: 80px 30px
 	flex(mid)
@@ -1046,15 +1052,21 @@ body
 	overflow hidden
 	position relative
 .shape-1
+	+below(1400px)
+		left -80%
 	top 0
 	left -30%
 .shape-2
-	+below(640px)
+	+below(1400px)
+		right: -80%
+	+below(768px)
 		display none
 	top 0
 	right: -30%
 .shape-3
-	+below(640px)
+	+below(1400px)
+		left -80%
+	+below(768px)
 		display none
 	top 10%
 	left -30%
@@ -1151,7 +1163,7 @@ body
 // solution === end
 .mark-list__el
 	padding-left: 30px
-	display block
+	display inline-block
 	//background: white
 	line-height: 1.6
 	color $dark
@@ -1261,6 +1273,8 @@ body
 	background: #8abbf3
 
 .laptop
+	+below(1600px)
+		margin: -40px 0 60px 0
 	+below(640px)
 		margin -20px 0 20px 0
 	margin: -100px 0 60px 0

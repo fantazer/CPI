@@ -8,17 +8,16 @@ include block_html/_include.pug
 			.header
 				a(href="/" data-aos="fade-right" data-aos-delay="600" data-aos-duration="1000").logo
 					img(src="img/main-logo.svg", alt="")
-
 				.nav(data-aos="fade-left" data-aos-delay="900" data-aos-duration="1000")
-					a(href="#capability" rel='m_PageScroll2id').nav__el Возможности
-					a(href="#cost" rel='m_PageScroll2id').nav__el Стоимость
-					a(href="#advant" rel='m_PageScroll2id').nav__el Преимущества
-					a(href="#about" rel='m_PageScroll2id').nav__el О компании
-					a(href="#order" rel='m_PageScroll2id').nav__el Заявка
+					a(href="#capability" rel='m_PageScroll2id').nav__el Opportunities
+					a(href="#cost" rel='m_PageScroll2id').nav__el Pricing
+					a(href="#advant" rel='m_PageScroll2id').nav__el Advantages
+					a(href="#about" rel='m_PageScroll2id').nav__el About us
+					a(href="#order" rel='m_PageScroll2id').nav__el Send a request
 				.lang
-					a(href="/").lang__el.lang__el--active
+					a(href="/").lang__el
 						img(src="img/russia.svg", alt="")
-					a(href="index-eng.html").lang__el
+					a(href="index-eng.html").lang__el.lang__el--active
 						img(src="img/united-kingdom.svg", alt="")
 				.head-toggle.js-slide-block-toggle(data-menu="menu")
 					+icon("menu","icon icon-open")
@@ -28,11 +27,11 @@ include block_html/_include.pug
 			.slide-nav
 				-
 					var items = [
-						{name: "Возможности", id: "#capability"},
-						{name: "Стоимость", id: "#cost"},
-						{name: "Преимущества", id: "#advant"},
-						{name: "О компании", id: "#about"},
-						{name: "Заявка", id: "#order"},
+						{name: "Opportunities", id: "#capability"},
+						{name: "Pricing", id: "#cost"},
+						{name: "Advantages", id: "#advant"},
+						{name: "About us", id: "#about"},
+						{name: "Send a request", id: "#order"},
 					];
 				each item in items
 					a(href = item.id rel = 'm_PageScroll2id' ).slide-nav__el #{item.name}
@@ -42,10 +41,10 @@ include block_html/_include.pug
 			.slogan
 				.slogan__logo(data-aos="fade-in" data-aos-delay="1400" data-aos-duration="2000")
 					img(src="img/logo-cpi.svg", alt="")
-				.slogan__title(data-aos="fade-right" data-aos-delay="1800" data-aos-duration="1000") Многомерный инструмент для построения системы непрерывного совершенствования и оценки возможностей процессов управления ИТ
+				.slogan__title(data-aos="fade-right" data-aos-delay="1800" data-aos-duration="1000") Multi-dimensional tool for building a continual improvement system and assessment of the possibilities of it management processes
 				//.slogan__text Автоматизируйте процессы, связанные с оказанием ИТ-услуг
-				a(href="/doc/app.zip" data-aos="fade-up" data-aos-delay="2200" data-aos-duration="500").slogan__get Скачать демонстрацию
-				a(href="/doc/insruction-install.docx" data-aos="fade-up" data-aos-delay="2800" data-aos-duration="500").slogan__get-text Как установить
+				a(href="/doc/app.zip" data-aos="fade-up" data-aos-delay="2200" data-aos-duration="500").slogan__get Download the demonstration
+				a(href="/doc/insruction-install.docx" data-aos="fade-up" data-aos-delay="2800" data-aos-duration="500").slogan__get-text Setup instruction
 .laptop(data-aos="fade-in" data-aos-delay="1000" data-aos-duration="2000")
 	.main-cont
 		img(src="img/laptop.png", alt="")
@@ -56,54 +55,51 @@ include block_html/_include.pug
 		.shape.shape-2
 			img(src="img/circle.svg", alt="")
 		.main-cont
-			.section-title(data-aos="fade-in" data-aos-delay="300" data-aos-duration="2000") Возможности системы
+			.section-title(data-aos="fade-in" data-aos-delay="300" data-aos-duration="2000") System capabilities
 				img(src="img/logo-cpi.svg", alt="")
-			.descr-text.text(data-aos="fade-in" data-aos-delay="600" data-aos-duration="2000") Централизованный инструмент для управления ИТ-экосистемой организации, который приводит к единству всю систему ИТ-управления и обеспечивает контроль достижения целевых показателей развития системы управления ИТ. Как результат — чёткое понимание необходимых инвестиций, прогноз улучшения бизнес-показателей и обеспечение роста бизнеса в целом.
-			.section-title(data-aos="fade-in" data-aos-delay="300" data-aos-duration="2000") Структура продукта
+			.descr-text.text(data-aos="fade-in" data-aos-delay="600" data-aos-duration="2000") A centralized tool for managing the organization's IT ecosystem, which brings together the entire IT management system and provides control over the achievement of target indicators for the development of the IT management system. As a result, a clear understanding of the required investments, a forecast for improving business performance and ensuring the growth of the business as a whole.
+			.section-title(data-aos="fade-in" data-aos-delay="300" data-aos-duration="2000") Product structure
 			.scheme(data-aos="fade-in" data-aos-delay="300" data-aos-duration="1500")
-				img(src="img/scheme.png", alt="")
-
-
-			.section-title(data-aos="fade-in" data-aos-delay="300" data-aos-duration="2000") Какие проблемы решает
+				img(src="img/scheme-eng.png", alt="")
+			.section-title(data-aos="fade-in" data-aos-delay="300" data-aos-duration="2000") What problems does it solve
 				img(src="img/logo-cpi.svg", alt="")
 			.descr-wrap(data-aos="flip-up" data-aos-delay="900" data-aos-duration="2000")
 				.descr-tools
-					.mark-list__el Постоянное повышение требований к уровню организации процессов и качеству предоставления ИТ-услуг
-					.mark-list__el Потребность в централизованном инструменте управления ИТ между всеми субъектами
-					.mark-list__el Необходимость создания единых требований к подходам управления и развития ИТ различных объектов
-					.mark-list__el Рост количества видов деятельности, автоматизируемых процессов, пользователей, обращений в ИТ
-					.mark-list__el Сложность в обеспечении эффективности контрольных процедур «ручным способом»
-					.mark-list__el Переход от «работы по отказам» к превентивным плановым мероприятиям по развитию
-					.mark-list__el Необходимость осуществлять постоянный контроль организации и исполнения процессов.
+					.mark-list__el Continual increasing the demands for the level of organization of processes and the quality of IT services
+					.mark-list__el The need for a centralized IT management tool between all subjects
+					.mark-list__el The need to create standard requirements for approaches to the management and development of IT of various objects
+					.mark-list__el Growth in the number of activities, automated processes, users, IT calls
+					.mark-list__el Difficulty in ensuring the effectiveness of control procedures "manually"
+					.mark-list__el Transition from "work on failures" to preventive planned development measures
+					.mark-list__el The need to constantly monitor the organization and execution of processes.
 
 .shape-wrap
-	.water-text CPIBOX
+	.water-text CPI Box
 	.shape.shape-4
 		img(src="img/shape-2.svg", alt="")
 	.section.section--dark
 		.main-cont
 			.solution
 				.solution__title(data-aos="fade-right" data-aos-delay="600" data-aos-duration="2000")
-					.solution__title-el Ценность CPIBOX creatio для бизнеса
+					.solution__title-el Value of CPI Box Creatio for business
 					//.solution__title-el-sub Low-Code BPM платформа позволяет продвинутым пользователем автоматизировать любые процессы
 				.solution__info(data-aos="fade-left" data-aos-delay="1200" data-aos-duration="2000")
-					.solution__el Создание эффективного механизма оценки текущего уровня зрелости процессов и его возможностей
-					.solution__el Определение необходимого уровня зрелости процессов, с точки зрения экономической целесообразности затрат на их развитие
-					.solution__el Обеспечить эффективное управление процессами и создание культуры внутреннего совершенствования процессов
-					.solution__el Непрерывно усовершенствовать процессы и прогнозировать будящий рост зрелости процессов используя созданные на год планы развития процессов
-					.solution__el Предоставление акционерам, ТОП-менеджменту и руководителям подразделений необходимую управленческую информацию
+					.solution__el Creating an effective mechanism for assessing the current level of process maturity and its capabilities
+					.solution__el Determination of the required level of maturity of processes, in terms of economic feasibility of their development costs
+					.solution__el To ensure the effective management of processes and the creation of a culture of internal process improvement
+					.solution__el Continuously improve processes and predict future growth in process maturity using the annual process development plans
+					.solution__el Providing shareholders, TOP management and division managers with the necessary management information
+
 
 .section.shape-wrap
 	.shape.shape-2
 		img(src="img/circle.svg", alt="")
-
 	.main-cont
-		.section-title.section-title--clear(data-aos="fade-in" data-aos-delay="300" data-aos-duration="2000") Преимущества платформы Creatio
-
+		.section-title.section-title--clear(data-aos="fade-in" data-aos-delay="300" data-aos-duration="2000") Advantages of the Creatio platform
 		.platform
 			.platform-logo(data-aos="fade-down" data-aos-delay="300" data-aos-duration="2000")
 				img(src="img/logo-creation.svg", alt="")
-				.platform-descr Готовые к использованию шаблоны и решения
+				.platform-descr Ready-to-use templates and solutions
 				//.platform-logo__arrow
 					img(src="img/twin-arrow.svg", alt="")
 
@@ -114,7 +110,7 @@ include block_html/_include.pug
 			.platform-logo-wrap(data-aos="fade-in" data-aos-delay="700" data-aos-duration="2000")
 				.platform-logo__add(data-aos="fade-in" data-aos-delay="1400" data-aos-duration="2000")
 					img(src="img/logo-service.svg", alt="")
-					span Вертикально интегрированные продукты
+					span Vertically integrated products
 				.platform-logo__row
 					.platform-logo__item(data-aos="fade-right" data-aos-delay="1400" data-aos-duration="1000")
 						img(src="img/logo-itsm.svg", alt="")
@@ -122,30 +118,30 @@ include block_html/_include.pug
 						img(src="img/logo-cpi.svg", alt="")
 
 		.platform-advant(data-aos="fade-in" data-aos-delay="1700" data-aos-duration="2000")
-			.plaform-advant__item Микросервисная архитектура
-			.plaform-advant__item Использование open-source технологий
-			.plaform-advant__item Поддержка разных СУБД
-			.plaform-advant__item Пользовательская настройка интеграций
-			.plaform-advant__item Открытый api и возможности интеграции
-			.plaform-advant__item Визуальный редактор интерфейсов
+			.plaform-advant__item microservice architecture
+			.plaform-advant__item Using open-source technologies
+			.plaform-advant__item Support for different DBMS
+			.plaform-advant__item Customizing integrations
+			.plaform-advant__item Open API and integration features
+			.plaform-advant__item Visual interface editor
 
 .section.section--mark#advant(style="background-image:url('img/item-1.jpg')")
 	.main-cont
-		.section-title.section-title--img(data-aos="fade-in" data-aos-delay="300" data-aos-duration="2000") 10 Причин выбрать
-			img(src="img/logo-itsm.svg", alt="")
+		.section-title.section-title--img(data-aos="fade-in" data-aos-delay="300" data-aos-duration="2000") 10 reasons to choose
+			img(src="img/logo-cpi.svg", alt="")
 		.why-text.text(data-aos="fade-in" data-aos-delay="600" data-aos-duration="2000")
-			p CPI box Creatio объединяет в едином интерфейсе все необходимые инструменты для автоматизации механизма оценки текущего уровня зрелости процессов и их возможностей.
+			p CPI box Creatio combines in a single interface all the necessary tools for automating the mechanism for evaluating the current level of maturity of processes and their capabilities.
 		ul.why(data-aos="fade-in" data-aos-delay="600" data-aos-duration="2000")
-			li.mark-list__el Обеспечение непрерывности и эффективности бизнеса.
-			li.mark-list__el Получение полного представления о любом процессе или услуге.
-			li.mark-list__el Предоставление оперативной информации в режиме реального времени.
-			li.mark-list__el Повышение качества обслуживания и производительности.
-			li.mark-list__el Оптимизация затрат.
-			li.mark-list__el Консолидация неэффективных инструментов в единую систему.
-			li.mark-list__el Легкая миграция.
-			li.mark-list__el Гибкая масштабируемость системы на любой стадии внедрения.
-			li.mark-list__el Гибкие интеграционные возможности.
-			li.mark-list__el Индивидуальная настройка системы под бизнес-задачи заказчика с помощью мастеров настройки функциональных блоков.
+			li.mark-list__el Ensuring business continuity and efficiency.
+			li.mark-list__el Getting a complete picture of any process or service.
+			li.mark-list__el Providing real-time operational information.
+			li.mark-list__el Improve service quality and productivity.
+			li.mark-list__el Cost optimization.
+			li.mark-list__el Consolidation of inefficient tools into a single system.
+			li.mark-list__el Easy migration.
+			li.mark-list__el Flexible scalability of the system at any stage of implementation.
+			li.mark-list__el Flexible integration capabilities.
+			li.mark-list__el Individual configuration of the system for the customer's business tasks using  the function block configuration wizards.
 
 .section.shape-wrap#cost
 	.shape.shape-2
@@ -153,28 +149,21 @@ include block_html/_include.pug
 	.shape.shape-3
 		img(src="img/circle.svg", alt="")
 	.main-cont
-		.section-title(data-aos="fade-in" data-aos-delay="300" data-aos-duration="2000") Стоимость лицензии
-			img(src="img/logo-itsm.svg", alt="")
+		.section-title(data-aos="fade-in" data-aos-delay="300" data-aos-duration="2000") Pricing
+			img(src="img/logo-cpi.svg", alt="")
 		.payment
 			.payment__el(data-aos="zoom-out" data-aos-delay="600" data-aos-duration="1000")
-				//.payment__title ITSM Box Creatio
-				.payment__descr cloud / on-site subscription
+				.payment__descr Cloud / on-site subscription
 				.payment__cost 1 152 $
-				.payment__cost-text пользователь / год
-				//a(href="#order" rel='m_PageScroll2id').payment__get.btn--md.btn--empty Заполнить заявку
-			.payment__el(data-aos="zoom-out" data-aos-delay="1200" data-aos-duration="1000")
-				//.payment__title ITSM Box Creatio
-				.payment__descr add-on one-time payment
+				.payment__cost-text Per user per year
+			//.payment__el(data-aos="zoom-out" data-aos-delay="1200" data-aos-duration="1000")
+				.payment__descr Add-on one-time payment
 				.payment__cost 345 609 $
-				.payment__cost-text единоразово / год
-				//a(href="#order" rel='m_PageScroll2id').payment__get.btn--md.btn--mark Заполнить заявку
+				.payment__cost-text One-time payment per year
 			.payment__el.payment__el--gray(data-aos="zoom-out" data-aos-delay="1800" data-aos-duration="1000")
-				//.payment__title Условия поддержки
-				.payment__cost-text Техническая поддержка доступна в будние дни
-				.payment__cost-text с 9:00 до 18:00 <br> (GMT +03:00)
-				.payment__cost-text В стоимость входит 5 часов поддержки
-				//a(href="#order" rel='m_PageScroll2id').payment__get.btn--md.btn--empty Заполнить заявку
-
+				.payment__cost-text Technical support is available during the working days
+				.payment__cost-text 9:00 - 18:00 <br> (GMT +03:00)
+				.payment__cost-text The price include 5 hours of technical support
 .section.section--extend.section--clear-mobile.section--dark#about
 	.about-wrap
 		.about-img(data-aos="fade-down-right" data-aos-delay="300" data-aos-duration="1500")
@@ -182,41 +171,41 @@ include block_html/_include.pug
 		.main-cont
 			.about(data-aos="fade-in" data-aos-delay="900" data-aos-duration="2000")
 				.about-info
-					.about-title Опыт IT Expert
+					.about-title IT Expert experience
 					.about-list
-						.mark-list__el  Компания основана в 2002 году и до настоящего времени является лидером на рынке консалтинговых и тренинговых услуг в области управления бизнес-процессами
-						.mark-list__el  За 15 лет компания выполнила более 350	консалтинговых и аудиторских ИТ-проектов
-						.mark-list__el  IT Expert имеет уникальный опыт участия в программах совершенствования управления информационными и смежными технологиями в крупных российских организациях
-						.mark-list__el  IT Expert в проектах решает различные задачи и выполняет ключевые роли: управляет ходом программ, осуществляет независимый и авторский надзор, предоставляет ключевую экспертизу, обеспечивает направляющий консалтинг
-						img(src="img/logo-powered.svg", alt="")
+						.mark-list__el The company was founded in 2002 and until now is the leader in the market of consulting and training services in the field of business process management
+						.mark-list__el For 15 years, the company has completed more than 350 consulting and audit IT projects
+						.mark-list__el IT Expert has unique experience in participating in programs to improve the management of information and related technologies in large Russian organizations
+						.mark-list__el IT Expert solves various tasks in projects and performs key roles: manages the course of programs, carries out independent and field supervision, provides key expertise, provides directional consulting
 
 .section.section--order#order
 	.main-cont
 		.order
 			.order__info(data-aos="fade-in" data-aos-delay="600" data-aos-duration="2000")
-				.order-title Свяжитесь с нами
-				.order-text Если у вас остались вопросы по лицензии, внедрению или вы хотите заказать демонстрацию системы.
+				.order-title Contact Us
+				.order-text If you have any questions about licensing, implementation or you want to see the demonstration of the system
 			.order__form
 				.shape-order(data-aos="fade-in" data-aos-delay="900" data-aos-duration="2000")
 					img(src="img/shape-3.svg", alt="")
 				form(action="javascript:void(null);" data-aos="zoom-out" data-aos-delay="1200" data-aos-duration="1000").order-form-el.validate-form.form
-					.title.title--lg Форма заявки
+					.title.title--lg Request form
+
 					.input-cont
 						.input-row
-							.input-row__title Ваше имя
-							input(type="text" placeholder="Ф.И.О." class="input" name="name")
+							.input-row__title Name
+							input(type="text" placeholder="Full name" class="input" name="name")
 					.input-cont
 						.input-row
-							.input-row__title Ваш телефон
-							input(type="text" placeholder="Введите Ваш телефон" class="input" name="phone")
+							.input-row__title Phone
+							input(type="text" placeholder="Enter your phone" class="input" name="phone")
 					input-cont
 						.input-row
-							.input-row__title Ваша почта
-							input(type="text" placeholder="Введите Вашу почту" class="input" name="mail")
+							.input-row__title Email
+							input(type="text" placeholder="Enter your email" class="input" name="mail")
 					.input-cont
 						.input-row
-							.input-row__title Ваше сообщение
-							textarea(name="text", cols="30", rows="5" class="input" placeholder="Сообщение")
+							.input-row__title Message
+							textarea(name="text", cols="30", rows="5" class="input" placeholder="Enter your message")
 					//checkbox remember
 					.login-remember
 						.check-el
@@ -224,15 +213,14 @@ include block_html/_include.pug
 								input(type="checkbox" name="agree").style-input
 								.style-input-element
 									+icon("checked","icon")
-								.style-input-text Я даю согласие на обработку моих персональных данных
-					input(type="submit" value="Отправить" class="btn--md btn--mark btn--mobile")
+								.style-input-text I consent to the processing of my personal data
+					input(type="submit" value="Send request" class="btn--md btn--mark btn--mobile")
 
 .footer-wrap
 	.main-cont
 		.footer
 			.footer-title(data-aos="flip-up" data-aos-delay="900" data-aos-duration="1000")
 				img(src="img/logo-cpi.svg", alt="")
-			.footer-text Автоматизируйте процессы, <br> связанные с оказанием ИТ-услуг
 			a(href="tel:+7 (495) 981-57-10").footer-phone +7 (495) 981-57-10
 			a(href="mailto:info@itexpert.ru").footer-mail info@itexpert.ru
 			.soc-row
@@ -253,26 +241,8 @@ include block_html/_include.pug
 				.modal-close
 					+icon("close-fat","icon")
 				img(src="img/email.svg", alt="")
-				.modal-title Спасибо за заявку
-				.modal-text-true Ваше сообщение отправленно, мы скоро свяжемся с Вами.
-.
-		<!-- Yandex.Metrika counter -->
-		<script type="text/javascript" >
-		(function(m,e,t,r,i,k,a){m[i]=m[i] || function () {
-			(m[i].a = m[i].a || []).push(arguments)
-		};
-		m[i].l=1 * new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-		(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-		ym(68494699, "init", {
-	clickmap:true,
-	trackLinks:true,
-	accurateTrackBounce:true,
-	webvisor:true
-	});
-	</script>
-	<noscript><div><img src="https://mc.yandex.ru/watch/68494699" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-	<!-- /Yandex.Metrika counter -->
+				.modal-title Thank you for your request
+				.modal-text-true Your message has been sent, we will contact you shortly.
 
 
 include ./block_html/_script.pug
